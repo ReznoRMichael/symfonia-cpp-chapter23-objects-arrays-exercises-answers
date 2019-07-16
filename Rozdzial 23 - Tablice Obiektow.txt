@@ -1,0 +1,23 @@
+I. odniesienie się do elementu tablicy będącej wewnątrz tablicy obiektów:
+
+Tklasa[4].Ttablica[66]
+
+plytka[4].kondensator[66]
+
+II. Jeśli klasa ma składniki public i private, to tablica obiektów tej klasy nie jest agregatem (prostym zgrupowaniem danych).
+
+III. Jeśli klasa ma zdefiniowany tylko konstruktor domniemany, a my zbudujemy z obiektów tej klasy tablicę, to nie będzie ona agregatem. (konstruktor domniemany generowany jest automatycznie przez kompilator, ale domyślnie wszystkie składniki danej klasy są private)
+
+IV. Obiekty typu const będące agregatami można inicjalizować wyłącznie za pomocą listy inicjalizatorów.
+
+V. Wewnętrzne klamry na liście inicjalizatorów nie są konieczne, ale dobrą praktyką jest ich używanie, gdyż ułatwiają czytelność oraz przydają się podczas inicjalizacji wybiórczej (pomijając niektóre obiekty na liście lub niektóre składniki obiektów)
+
+VI. Jeśli liczba inicjalizatorów będzie:
+— krótsza niż lista elementów: pozostałe elementy w tablicy zostaną zapełnione zerami
+— dłuższa niż lista elementów: błąd kompilacji
+
+VII. Ćwiczenie z listy inicjalizatorów. (program)
+
+VIII. Klasa o której wiemy, że jej elementy będą służyły do tworzenia tablic operatorem new, powinna mieć:
+— albo tylko konstruktor domniemany (za jego pomocą jest wykonywana inicjalizacja)
+— albo żadnych konstruktorów (domniemany jest generowany automatycznie)
